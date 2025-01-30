@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 
 .logueo {
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     background-color: #000;
     background-image: url("../img/ventainicio.png");
     background-size: cover;
+    background-position: center;
     color: white;   
 }
 
@@ -40,6 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 
 .logform{
+   
     width: 50%;
     display: flex;
     justify-content: center;
@@ -50,33 +52,82 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 
 .formulario{
-    width: 40%;
-    background-color: #393939;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.formulario label{
-    padding-top: 20px;
-    font-size: 20px;
-    color: white;
-    font-family: cursive;
-}
-
-.btn{
-    display: flex;
+    
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: transparent;
+    border-radius: 20px;
+    border:2px solid rgba(255,255,255,.5);
+    display:flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    flex-direction: column;
+    backdrop-filter:blur(15px);
+}
+.input-box{
+    position:relative;
+    width: 310px;
+    margin:30px 0;
+    border-bottom: 2px solid #fff;
+    
 }
 
-.btn input{
-    background-color: black;
+.input-box label{
+    position:absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-80%);
+    font-family: cursive;
+    font-size:1em;
+    color:white;
+    pointer-events:none;
+    transition: 0.5s;
+   
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px; 
+}
+
+.input-box input{
+    width:90%;
+    height: 50px;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size: 1em;
+    color:white;
+    padding:0 35px 0 5px;
+    autocomplete: off;
+}
+
+.input-box .icon{
+    position:absolute;
+    right:8px;
+    color:white;
+    font-size:1.2em;
+    line-height: 57px;
+}
+
+
+.btn-ingresar{
+    background-color: white;
     color: white;
     padding: 10px;
-    width: 40%;
-    font-family: serif;
+    width: 70%;
+    height: 40px;
+    font-family: cursive;
+    border-radius: 40px;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    font-size: 1em;
+    color:black;
+    font-weight: 500;
 }
+
 
 
 
