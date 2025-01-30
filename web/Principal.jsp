@@ -15,25 +15,70 @@
     </head>
     <body>
          <nav class="navi">
+             <a href="Principal.jsp"><img src="img/logo.png" alt="Logo"/></a>
              <ul>
-                 <li><a href="#">Inicio</a></li>
-                 <li><a href="#">Salir</a></li>
+                 <li class="right"><a href="index.jsp">Salir</a></li>
              </ul>
         </nav>
-            <div>
-                    <form action="Controlador?menu=NuevaVenta" method="POST">    
-                        <div>
-                            <div class="col-12">
-                                <button type="submit" name="accion" value="ventanueva" class="btn btn-lg badge badge-light">
-                                    <img src="img/cart.png" alt=""/>
-                                </button>
-                            </div>
-                            <div class="col-12">
-                                <label><h6>VENTA NUEVA</h6></label>  
-                            </div> 
-                        </div>
-                    </form>
+        <div class="formventa">
+            <form action="Controlador?menu=NuevaVenta" method="POST">    
+
+                        <div class="ventan">
+                            <button type="submit" name="accion" value="ventanueva" class="btnventa">
+                                <img src="img/carrito.png" alt=""/>
+                            </button>
+
+                        </div>    
+
+
+            </form>
+
+            <form action="Controlador?menu=Empleado&accion=Listar" method="POST">    
+                    <div class="formventa">
+                        <div class="ventan">
+
+                            <button type="submit" name="accion" value="Listar" class="btnventa">
+                                <img src="img/user.webp" alt=""/>
+                            </button>
+
+                        </div>    
+                    </div>
+
+
+            </form>
+
+            <form action="Controlador?menu=Cliente&accion=Listar" method="POST">    
+                    <div class="formventa">
+                        <div class="ventan">
+                            <button type="submit" name="accion" value="Listar" class="btnventa">
+                                <img src="img/clientes.png" alt=""/>
+                            </button>
+                        </div>    
+                    </div>
+
+
+            </form>
+            
+            <form action="Controlador?menu=Producto&accion=Listar" method="POST">    
+                    <div class="formventa">
+                        <div class="ventan">
+                            <button type="submit" name="accion" value="Listar" class="btnventa">
+                                <img src="img/productos.png" alt=""/>
+                            </button>
+                        </div>    
+                    </div>
+
+
+            </form>
         </div>
+
+        <div class="textotbtn">
+                    <h2>Nueva<br>Venta</h2>
+                    <h2>Usuarios</h2>
+                    <h2>Clientes</h2>
+                    <h2>Productos</h2>
+        </div>
+ 
     </body>
     
 </html>
