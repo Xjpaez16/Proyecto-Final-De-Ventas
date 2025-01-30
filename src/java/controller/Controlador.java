@@ -33,7 +33,7 @@ import sendemail.SendEmailUsingGMailSMTP;
  *
  * @author Estudiante
  */
-@WebServlet(name = "Controladorcito", urlPatterns = {"/Controladorcito"})
+@WebServlet(name = "Controlador", urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet {
     Empleado em = new Empleado();
     EmpleadoDAO edao = new EmpleadoDAO();

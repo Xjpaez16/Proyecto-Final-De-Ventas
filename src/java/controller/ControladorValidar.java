@@ -25,7 +25,7 @@ public class ControladorValidar extends HttpServlet {
             em = edao.validar(user, pass);
             if (em.getUser() != null) {
                 session.setAttribute("usuario", em);
-                request.getRequestDispatcher("Controladorcito?menu=Principal").forward(request, response);
+                request.getRequestDispatcher("Controlador?menu=Principal").forward(request, response);
             } else {
                 session.invalidate();
                 request.getRequestDispatcher("index.jsp").forward(request, response);

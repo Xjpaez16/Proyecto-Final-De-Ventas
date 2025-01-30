@@ -7,7 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Author     : Angel
 */
 
-body {
+html, body {
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -21,13 +22,28 @@ body {
     width: 100%;
 }
 
+.navi img{
+    width: 400px;
+    height: 150px;
+}
+
+.navi img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 .navi ul {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Distribuye los <li> */
     width: 100%;
+    justify-content: space-around;
 }
 
+
+.navi ul li.right {
+    margin-left: auto;
+    margin-right: 80px;
+}
 
 .navi ul li a {
     color: white;
@@ -37,7 +53,39 @@ body {
 }
 
 .formventa{
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ventan{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 200px;
+}
+
+.btnventa{
+    width: 200px;
+    height: 200px;
+    overflow: hidden; 
+}
+
+.btnventa img{
+    object-fit: cover;
+    width: 190px;
+    height: 190px;
+}
+
+.textotbtn{
+    text-align: center; /* Centra el texto dentro de este div */
     display: flex;
     justify-content: center;
+    justify-content: space-around;
 }
 
