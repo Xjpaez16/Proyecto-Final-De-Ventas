@@ -1,0 +1,82 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 29/01/2025, 9:09:45 a. m.
+    Author     : Angel
+*/
+
+.inicio{
+    display: flex;
+    flex-direction: row;
+}
+
+.logueo {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    background-image: url("../img/ventainicio.png");
+    background-size: cover;
+    color: white;   
+}
+
+.logueo label{
+    padding-top: 60px;
+    font-size:  24px;
+    font-family: cursive;
+}
+
+.logueo h3{
+    text-align: center;
+    font-family: cursive;
+    font-size: 60px;
+    color: white;
+    padding-bottom: 60px;
+}
+
+.logform{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    
+}
+
+.formulario{
+    width: 40%;
+    background-color: #393939;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.formulario label{
+    padding-top: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: cursive;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn input{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    font-family: serif;
+}
+
+
+

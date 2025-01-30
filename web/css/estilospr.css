@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 29/01/2025, 9:02:58 p. m.
+    Author     : Angel
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 80px;  /* Ajusta la altura según necesites */
+    width: 100%;
+}
+
+.navi ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Distribuye los <li> */
+    width: 100%;
+}
+
+
+.navi ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.formventa{
+    display: flex;
+    justify-content: center;
+}
+
