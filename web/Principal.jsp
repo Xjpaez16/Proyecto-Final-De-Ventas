@@ -20,6 +20,11 @@
                  <li class="right"><a href="index.jsp">Salir</a></li>
              </ul>
         </nav>
+        <script>
+            window.onload = function() {
+                document.getElementById("formEmpleado").submit();
+            };
+        </script>
         <div class="formventa">
             <form action="Controlador?menu=NuevaVenta" method="POST">    
 

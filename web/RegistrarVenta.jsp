@@ -1,6 +1,17 @@
 <%@ include file="commons/header.jspf"%>
-<%@ include file="commons/navigate.jspf"%>
-
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilospr.css">
+        <title>Empleado</title>
+</head>
+<body class="vender">
+    <nav class="navi">
+         <a href="Principal.jsp"><img src="img/logo.png" alt="Logo"/></a>
+         <ul>
+             <li class="right"><a href="index.jsp">Salir</a></li>
+         </ul>
+    </nav>
 <div class="container mt-4">
     <div class="row">
         <div class="col-lg-5 parte01">
@@ -112,5 +123,6 @@
 
         </div>
     </div>
-</div>                     
+</div>
+</body>
 <%@ include file="commons/footer.jspf"%>

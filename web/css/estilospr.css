@@ -104,3 +104,88 @@ html, body {
     justify-content: space-around;
 }
 
+
+
+.empleado{
+    background-image: url("../img/fondoemp.png");
+    background-size: cover;
+}
+
+.formularioemp{
+    
+    background: transparent; /* Fondo blanco con 50% de transparencia */
+    border-radius: 8px; /* Bordes redondeados */
+    color: black;
+}
+
+.container,
+.row,
+.col-sm-4,
+.card {
+    background: transparent; /* Fondo transparente */
+    color: #090909;
+    
+}
+
+.card-body{
+     background: rgba(255, 255, 255, 0.3);
+     border:2px solid #090909;
+     backdrop-filter: blur(5px);
+     color: #090909;
+}
+
+.btn {
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.btn-primary {
+    background-color: #090909; 
+    border: none; 
+    color: white; 
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+.btn-success {
+    background-color: #4c4c4c; 
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+}
+
+.table{
+    color: black;
+}
+
+/*CLIENTES*/
+
+.cliente{
+    background-image: url("../img/fondocli.png");
+    background-size: cover;
+}
+
+.mt-4{
+    padding-top: 80px;
+    padding-bottom:  50px;
+}
+
+.vender{
+    background-image: url("../img/fondoven.png");
+    background-size: cover;
+}
+
+.productosee{
+    background-image: url("../img/fondopro.png");
+    background-size: cover;
+}
