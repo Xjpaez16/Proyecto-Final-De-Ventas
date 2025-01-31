@@ -9,15 +9,15 @@
                     <form action="Controlador?menu=Empleado" method="POST">
                         <div class="form-group">
                             <label>Dni</label>
-                            <input type="text" value="${empleado.getDni()}" name="txtDni" class="form-control">
+                            <input type="text" value="${empleado.getDni()}" name="txtDni" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Nombres</label>
-                            <input type="text" value="${empleado.getNom()}" name="txtNombres" class="form-control">
+                            <input type="text" value="${empleado.getNom()}" name="txtNombres" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Telefono</label>
-                            <input type="text" value="${empleado.getTel()}" name="txtTel" class="form-control">
+                            <input type="text" value="${empleado.getTel()}" name="txtTel" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Estado</label>
@@ -27,8 +27,16 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label>Correo</label>
+                            <input type="email" value="${empleado.getCorreo()}" name="txtCorreo" class="form-control" required>
+                        </div>
+                        <div class="form-group">
                             <label>Usuario</label>
-                            <input type="text" value="${empleado.getUser()}" name="txtUser" class="form-control">
+                            <input type="text" value="${empleado.getUser()}" name="txtUser" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Contraseña</label>
+                            <input type="password" value="${empleado.getPassword()}" name="txtPassword" class="form-control" required>
                         </div>
                         <input type="submit" name="accion" value="Agregar" class="btn btn-primary">
                         <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
@@ -47,6 +55,7 @@
                                 <th>DNI</th>
                                 <th>TELEFONO</th>
                                 <th>ESTADO</th>
+                                <th>CORREO</th>
                                 <th>USER</th>
                                 <th>ACCION</th>
                             </tr>
@@ -64,6 +73,7 @@
                                     <c:if test="${em.getEstado()=='0'}">
                                         <td>INACTIVO</td>
                                     </c:if>                                    
+                                    <td>${em.getCorreo()}</td>
                                     <td>${em.getUser()}</td>
                                     <td>
                                         <a class="btn btn-outline-warning btn-sm" href="Controlador?menu=Empleado&accion=Editar&id=${em.getId()}"><i class="bi bi-pencil-square"></i></a>                                        
@@ -71,7 +81,6 @@
                                     </td>
                                 </tr>
                             </c:forEach>
-
                         </tbody>
                     </table>
                 </div>

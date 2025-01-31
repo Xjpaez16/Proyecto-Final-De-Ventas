@@ -4,14 +4,7 @@
  */
 package controller;
 
-import Modelo.Cliente;
-import Modelo.ClienteDAO;
-import Modelo.Empleado;
-import Modelo.EmpleadoDAO;
-import Modelo.Producto;
-import Modelo.ProductoDAO;
-import Modelo.Venta;
-import Modelo.VentaDAO;
+import Modelo.*;
 import config.GenerarSerie;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -79,45 +72,60 @@ public class Controlador extends HttpServlet {
                     String nom = request.getParameter("txtNombres");
                     String tel = request.getParameter("txtTel");
                     String est = request.getParameter("txtEstado");
+                    String corr = request.getParameter("txtCorreo");
                     String user = request.getParameter("txtUser");
+                    String pass = request.getParameter("txtPassword");
                     em.setDni(dni);
                     em.setNom(nom);
                     em.setTel(tel);
                     em.setEstado(est);
+                    em.setCorreo(corr);
                     em.setUser(user);
+                    em.setPassword(pass);
                     edao.agregar(em);
-                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
+                    List lista1 = edao.listar();
+                    request.setAttribute("empleados", lista1);
+                    //request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 case "Editar":
                     ide = Integer.parseInt(request.getParameter("id"));
                     Empleado e = edao.listarId(ide);
                     request.setAttribute("empleado", e);
-                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
+                    List lista2 = edao.listar();
+                    request.setAttribute("empleados", lista2);
+                    //request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 case "Actualizar":
                     String dni1 = request.getParameter("txtDni");
                     String nom1 = request.getParameter("txtNombres");
                     String tel1 = request.getParameter("txtTel");
                     String est1 = request.getParameter("txtEstado");
+                    String corr1 = request.getParameter("txtCorreo");
                     String user1 = request.getParameter("txtUser");
+                    String pass1 = request.getParameter("txtPassword");
                     em.setDni(dni1);
                     em.setNom(nom1);
                     em.setTel(tel1);
                     em.setEstado(est1);
+                    em.setCorreo(corr1);
                     em.setUser(user1);
+                    em.setPassword(pass1);
                     em.setId(ide);
                     edao.actualizar(em);
-                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
+                    List lista3 = edao.listar();
+                    request.setAttribute("empleados", lista3);
+                    //request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 case "Delete":
                     ide = Integer.parseInt(request.getParameter("id"));
                     edao.delete(ide);
-                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
+                    List lista4 = edao.listar();
+                    request.setAttribute("empleados", lista4);
+                    //request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
                     break;
                 default:
                     throw new AssertionError();
             }
-
             request.getRequestDispatcher("Empleado.jsp").forward(request, response);
         }
         if (menu.equals("Cliente")) {

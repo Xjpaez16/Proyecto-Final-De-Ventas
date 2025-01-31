@@ -8,17 +8,37 @@ public class Empleado {
     String tel;
     String estado;
     String user;
+    String password;
+    String correo;
 
     public Empleado() {
     }
 
-    public Empleado(int id, String dni, String nom, String tel, String estado, String user) {
+    public Empleado(int id, String dni, String nom, String tel, String estado, String user, String password, String correo) {
         this.id = id;
         this.dni = dni;
         this.nom = nom;
         this.tel = tel;
         this.estado = estado;
         this.user = user;
+        this.password = password;
+        this.correo = correo;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {
@@ -69,5 +89,5 @@ public class Empleado {
         this.user = user;
     }
 
-    
+
 }

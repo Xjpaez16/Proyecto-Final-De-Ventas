@@ -74,7 +74,7 @@
 
         <div class="textotbtn">
                     <h2>Nueva<br>Venta</h2>
-                    <h2>Usuarios</h2>
+                    <h2>Empleados</h2>
                     <h2>Clientes</h2>
                     <h2>Productos</h2>
         </div>

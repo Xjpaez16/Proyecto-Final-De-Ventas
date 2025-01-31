@@ -23,7 +23,9 @@ CREATE TABLE `empleado` (
   `Nombres` varchar(255) DEFAULT NULL,
   `Telefono` varchar(9) DEFAULT NULL,
   `Estado` varchar(1) DEFAULT NULL,
-  `User` varchar(8) DEFAULT NULL
+  `Correo` varchar(30) DEFAULT NULL,
+  `User` varchar(8) NOT NULL,
+  `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `ventas` (
@@ -86,10 +88,6 @@ ALTER TABLE `detalle_ventas`
 ALTER TABLE `detalle_ventas`
   MODIFY `IdDetalleVentas` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 
-INSERT INTO `empleado` (`IdEmpleado`, `Dni`, `Nombres`, `Telefono`, `Estado`, `User`) VALUES
-(1, '123', 'Pedro Hernandez', '988252459', '1', 'emp01'),
-(2, '123', 'Roman Riquelme', '988252459', '1', 'Jo46'),
-(3, '123', 'Palermo Suarez', '453536458', '1', 'Em22');
 
 INSERT INTO `producto` (`IdProducto`, `Nombres`, `Precio`, `Stock`, `Estado`) VALUES
 (1, 'Teclado Logitech 345 Editado', 150, 99, '1'),
@@ -103,3 +101,8 @@ INSERT INTO `cliente` (`IdCliente`, `Dni`, `Nombres`, `Direccion`, `Estado`) VAL
 (18, '321', 'Maria Rosas Villanueva', 'example@peru.edu.pe', '1'),
 (19, '432', 'Andres de Santa Cruz', 'example@nasa.edu.pe', '1'),
 (20, '234', 'Andres Mendoza', 'example@google.edu.pe', '1');
+
+INSERT INTO empleado (IdEmpleado, Dni, Nombres, Telefono, Estado, User, Password, Correo) VALUES
+(1, '123', 'Pedro Hernandez', '988252459', '1', 'emp01', 'clave123', 'pedro.hernandez@example.com'),
+(2, '123', 'Roman Riquelme', '988252459', '1', 'Jo46', 'clave456', 'roman.riquelme@example.com'),
+(3, '123', 'Palermo Suarez', '453536458', '1', 'Em22', 'clave789', 'palermo.suarez@example.com');
