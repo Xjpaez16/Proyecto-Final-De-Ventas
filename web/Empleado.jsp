@@ -66,8 +66,8 @@
                                     </c:if>                                    
                                     <td>${em.getUser()}</td>
                                     <td>
-                                        <a class="btn btn-outline-warning btn-sm" href="Controlador?menu=Empleado&accion=Editar&id=${em.getId()}"><i class="bi bi-trash"></i></a>                                        
-                                        <a class="btn btn-outline-danger btn-sm" href="Controlador?menu=Empleado&accion=Delete&id=${em.getId()}"><i class="bi bi-pencil-square"></i></a>
+                                        <a class="btn btn-outline-warning btn-sm" href="Controlador?menu=Empleado&accion=Editar&id=${em.getId()}"><i class="bi bi-pencil-square"></i></a>                                        
+                                        <a class="btn btn-outline-danger btn-sm" href="Controlador?menu=Empleado&accion=Delete&id=${em.getId()}"><i class="bi bi-trash"></i></a>
                                     </td>
                                 </tr>
                             </c:forEach>
