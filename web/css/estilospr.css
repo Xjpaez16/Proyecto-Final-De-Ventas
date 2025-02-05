@@ -256,3 +256,48 @@ html, body {
 .Btn:active {
     transform: translate(2px ,2px);
 }
+
+.empleadodiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+.formempleado {
+    width: 60%; 
+    display: flex;
+    justify-content: center; 
+    padding-right: 0; 
+}
+
+.formempleado form {
+    border: 2px solid #000; /* Agrega borde */
+    padding: 40px; /* Agrega espacio interno */
+    width: 80%; /* El formulario ocupará todo el ancho de su contenedor */
+    box-sizing: border-box; /* Asegura que el padding no sume al ancho total */
+    border-radius: 10px;
+    color: white;
+}
+
+.tablita{
+    width: 70%;
+}
+
+.trtablita{
+    color: white;
+}
+
+.botonesemp{
+    padding-top: 20px;
+}
+
+.dt-button.buttons-pdf.buttons-html5 {
+    color: white; /* Cambia el color de la letra a blanco */
+}
+
+.tr:hover{
+    color: white;
+}
