@@ -22,12 +22,17 @@ body{
     align-items: center;
     height: 100vh;
     background-color: #000;
-    background-image: url("../img/ventainicio.png");
+    padding-bottom: 100px ;
     background-size: cover;
     background-position: center;
     color: white;   
+   
 }
-
+.logueo img{
+    padding-top: 50px;
+    width: 500px;
+    height: 500px;
+}
 .logueo label{
     padding-top: 60px;
     font-size:  24px;
@@ -64,7 +69,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    backdrop-filter:blur(15px);
+   
 }
 .input-box{
     position:relative;
@@ -119,7 +124,7 @@ body{
     padding: 10px;
     width: 70%;
     height: 40px;
-   
+    margin-bottom: 20px;
     border-radius: 40px;
     border:none;
     outline:none;

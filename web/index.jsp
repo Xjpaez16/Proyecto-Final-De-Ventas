@@ -15,8 +15,9 @@
                 <div class="inicio">
                     <div class="logueo">
                     
-                        <img src="img/logo.png">
-                    <label>Bienvenidos al Sistema</label>
+                        <img src="img/Gif de texto simple en blanco y negro.gif">
+                       
+                    
                     <div class="formulario">
                             <h3>Login</h3>
                             <div class="input-box">

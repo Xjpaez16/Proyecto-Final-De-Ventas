@@ -19,24 +19,28 @@ public class EmpleadoDAO {
 
     public Empleado validar(String user, String password) {
         Empleado em = new Empleado();
-        String sql = "select * from empleado where User=? and Password=?";
+        String sql = "select * from empleado where User=?";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
             ps.setString(1, user);
-            ps.setString(2, password);
             rs = ps.executeQuery();
-            while (rs.next()) {
-                em.setId(rs.getInt("IdEmpleado"));
-                em.setUser(rs.getString("User"));
-                em.setDni(rs.getString("Dni"));
-                em.setNom(rs.getString("Nombres"));
+
+            if (rs.next()) {
+                String passwordHash = rs.getString("password");
+
+                
+                if (HashPass.hashPassword(password).equals(passwordHash)) {
+                    
+                    em = new Empleado();
+                    em.setId(rs.getInt("IdEmpleado"));
+                    em.setUser(rs.getString("User"));
+                    em.setDni(rs.getString("Dni"));
+                    em.setNom(rs.getString("Nombres"));
+                }
             }
-            ps.close();
-            con.close();
-            rs.close();
         } catch (SQLException e) {
-            System.out.println("Error: " + e);
+            System.out.println("Error al validar usuario: " + e.getMessage());
         }
         return em;
     }
@@ -81,7 +85,10 @@ public class EmpleadoDAO {
             ps.setString(4, em.getEstado());
             ps.setString(5, em.getCorreo());
             ps.setString(6, em.getUser());
-            ps.setString(7, em.getPassword());
+            
+            String hashedPassword = HashPass.hashPassword(em.getPassword());
+            ps.setString(7, hashedPassword);
+            
             ps.executeUpdate();
             ps.close();
             con.close();
@@ -129,7 +136,8 @@ public class EmpleadoDAO {
             ps.setString(4, em.getEstado());
             ps.setString(5, em.getCorreo());
             ps.setString(6, em.getUser());
-            ps.setString(7, em.getPassword());
+            String hashedPassword = HashPass.hashPassword(em.getPassword());
+            ps.setString(7, hashedPassword);
             ps.setInt(8, em.getId());
             ps.executeUpdate();
             ps.close();

@@ -19,13 +19,57 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 80px;  /* Ajusta la altura según necesites */
+    height: 100px;  
     width: 100%;
 }
+.logobtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+
+.logobtn .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: 0.3s;
+}
+
+.logobtn:hover {
+    color: transparent;
+    text-decoration: none;
+}
+
+.logobtn:hover h1 {
+    left: 50%;
+    margin-right: auto ;
+    margin-left: 0;
+    padding: 0;
+    border: none;
+    transition-duration: 0.5s;
+    text-decoration: none;
+}
+
+
 
 .navi img{
-    width: 400px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
+    margin-left:100px; 
 }
 
 .navi img:hover{
@@ -298,6 +342,131 @@ html, body {
     color: white; /* Cambia el color de la letra a blanco */
 }
 
-.tr:hover{
-    color: white;
+
+
+.button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cc0000;
+  background-color: #e50000;
+  overflow: hidden;
+  text-decoration: none;
 }
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(35px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+}
+
+.button:hover {
+  background: #cc0000;
+  text-decoration: none;
+}
+
+.button:hover .button__text {
+  color: transparent;
+  text-decoration: none;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+  text-decoration: none;
+}
+
+.button:active .button__icon {
+  background-color: #b20000;
+  text-decoration: none;
+}
+
+.button:active {
+  border: 1px solid #b20000;
+  text-decoration: none;
+}
+
+.Btnedit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+
+.Btnedit .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: 0.3s;
+}
+
+.Btnedit:hover {
+    color: transparent;
+    text-decoration: none;
+}
+
+.Btnedit:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+
+.Btnedit:active {
+    transform: translate(3px, 3px);
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 0px white;
+    text-decoration: none;
+}
+.dataTables_filter label{
+    color: white;
+    font-weight: 600;
+    
+}
+.dataTables_filter input{
+    color: white;
+   
+    
+}
+.dataTables_paginate .paging_simple_numbers .paginate_button previous disabled .paginate_button next disabled{
+    color: white;
+    font-weight: 600;
+}
+
