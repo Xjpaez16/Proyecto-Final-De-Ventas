@@ -1,5 +1,11 @@
 <%@ include file="commons/header.jspf"%>
+<%
+    HttpSession misesion = request.getSession();
+    if (misesion.getAttribute("usuario") == null) {
+        response.sendRedirect("index.jsp");
+    } else {
 
+%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +16,7 @@
         <nav class="navi">
              <a href="Principal.jsp"><img src="img/logo.png" alt="Logo"/></a>
              <ul>
-                 <li class="right"><a href="index.jsp">Salir</a></li>
+                 <li class="right"><form method="POST" action="Validar"><button type="submit" name="accion" value="salir" >Salir</button></form></li>
              </ul>
         </nav>
         <div class="container mt-4">
@@ -101,6 +107,6 @@
         </div>      
     </div>      
 </body>
-
+<% } %>
 <%@ include file="commons/footer.jspf"%>
 

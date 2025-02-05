@@ -15,7 +15,7 @@
                 <div class="inicio">
                     <div class="logueo">
                     
-                    <img src="img/logo.png">
+                        <img src="img/logo.png">
                     <label>Bienvenidos al Sistema</label>
                     <div class="formulario">
                             <h3>Login</h3>

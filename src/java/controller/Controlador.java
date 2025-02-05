@@ -7,19 +7,14 @@ package controller;
 import Modelo.*;
 import config.GenerarSerie;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.awt.Desktop;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import sendemail.SendEmailUsingGMailSMTP;
 
 /**
@@ -219,12 +214,14 @@ public class Controlador extends HttpServlet {
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
                 default:
+                    
                     throw new AssertionError();
             }
 
             
         }
         if (menu.equals("NuevaVenta")) {
+            if(accion!=null){
             switch (accion) {
                         case "BuscarCliente":
                     String dni = request.getParameter("codigocliente");
@@ -386,6 +383,9 @@ public class Controlador extends HttpServlet {
                         request.setAttribute("nserie", numeroserie);
                     }
                     session.setAttribute("usuario", usuario);
+                    request.getRequestDispatcher("RegistrarVenta.jsp").forward(request, response);
+            }
+            }else{
                     request.getRequestDispatcher("RegistrarVenta.jsp").forward(request, response);
             }
         }

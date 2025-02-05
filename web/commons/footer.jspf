@@ -1,3 +1,4 @@
+
 <div class="footer">
     
 </div>
@@ -37,20 +38,7 @@
                         doc.content[1].margin = [ 50, 0, 100, 0 ]
                     }
                 },
-                {
-                    extend: 'excel',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4]
-                    },
-                    title: 'Reporte'
-                },
-                {
-                    extend: 'print',
-                    exportOptions: {
-                        columns: [0, 1, 2, 3, 4]
-                    },
-                    title: 'Reporte'
-                }
+                
                 //'excel', 'pdf', 'print'
             ],
             "ordering": false,
