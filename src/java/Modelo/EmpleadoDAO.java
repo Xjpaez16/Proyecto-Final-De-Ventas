@@ -114,7 +114,6 @@ public class EmpleadoDAO {
                 emp.setEstado(rs.getString(5));
                 emp.setCorreo(rs.getString(6));
                 emp.setUser(rs.getString(7));
-                emp.setPassword(rs.getString(8));
             }
             ps.close();
             con.close();
