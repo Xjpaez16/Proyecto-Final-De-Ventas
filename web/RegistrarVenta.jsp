@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group d-flex">
                             <div class="col-sm-6 d-flex">
-                                <input type="text" name="codigocliente" value="${c.getDni()}" class="form-control" placeholder="DNI" required>
+                                <input type="text" name="codigocliente" value="${c.getDni()}" class="form-control" placeholder="DNI" >
                                 <button type="submit" name="accion" value="BuscarCliente" class="btn btn-dark">Buscar</button>
                             </div>                           
                             <div class="col-sm-6">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group d-flex">
                             <div class="col-sm-6 d-flex">
-                                <input type="text" name="codigoproducto" value="${producto.getId()}" class="form-control" placeholder="Codigo" required>
+                                <input type="text" name="codigoproducto" value="${producto.getId()}" class="form-control" placeholder="Codigo" >
                                 <button type="submit" name="accion" value="BuscarProducto" class="btn btn-dark">Buscar</button>
                             </div>                           
                             <div class="col-sm-6">
