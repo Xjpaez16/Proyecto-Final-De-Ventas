@@ -16,60 +16,52 @@ html, body {
 
 .navi {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Alinea verticalmente */
     background-color: black;
     height: 100px;  
     width: 100%;
 }
-.logobtn {
-    position: relative;
+
+.navidiv {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 150px;
-    height: 40px;
-    border: none;
-    padding: 0px 20px;
-    margin-bottom: 10px;
-    background-color: black;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra verticalmente */
+    padding-left: 100px;
+}
+
+.navidiv a {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra verticalmente */
+    text-decoration: none;
+    color: white; /* Asegura que el texto sea visible */
+}
+
+.navidiv img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+.navidiv h1 {
+    font-size: 24px;
+    margin: 0; /* Elimina márgenes innecesarios */
     color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    text-decoration: none;
+    font-weight: normal; 
+    transition: transform 0.9s ease, opacity 0.9s ease; /* Transición suave */
 }
 
-.logobtn .svg {
-    width: 13px;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
-    fill: white;
-    transition-duration: 0.3s;
+.navidiv a:hover h1 {
+    transform: translateX(-60px); /* Desplaza el texto hacia la izquierda */
+    opacity: 0; /* Hace que el texto sea invisible */
 }
 
-.logobtn:hover {
-    color: transparent;
-    text-decoration: none;
+.navidiv a:hover img {
+    transform: scale(1.0); /* Aumenta el tamaño de la imagen al pasar el cursor */
 }
-
-.logobtn:hover h1 {
-    left: 50%;
-    margin-right: auto ;
-    margin-left: 0;
-    padding: 0;
-    border: none;
-    transition-duration: 0.5s;
-    text-decoration: none;
-}
-
-
 
 .navi img{
     width: 80px;
     height: 80px;
-    margin-left:100px; 
 }
 
 .navi img:hover{
@@ -95,6 +87,10 @@ html, body {
     text-decoration: none;
     font-family: cursive;
     font-size: 20px;
+}
+
+.bodypr{
+    background-color: #0e0e0e;
 }
 
 .formventa{
@@ -127,18 +123,35 @@ html, body {
    cursor: pointer;
    border: 1px solid #e8e8e8;
    transition: all 0.3s;
-   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+   
              
 }
-.btnventa:active{
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+.btnventa {
+    /* Estilos por defecto */
+    color: #000;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Agrega una transición suave */
 }
 
-.btnventa img{
+.btnventa:hover {
+    color: #666; /* Cambia el color cuando pasa el cursor */
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.btnventa:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.btnventa img {
     object-fit: cover;
     width: 190px;
     height: 190px;
+    transition: transform 0.3s ease; /* Transición para un efecto de transformación */
+}
+
+.btnventa:hover img {
+    transform: scale(1.05); /* Efecto de aumento de la imagen cuando se pasa el cursor */
 }
 
 .textotbtn{
@@ -146,6 +159,7 @@ html, body {
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    color: white;
 }
 
 
@@ -469,4 +483,3 @@ html, body {
     color: white;
     font-weight: 600;
 }
-
