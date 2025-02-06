@@ -41,11 +41,11 @@
                         </div>
                         <div class="form-group d-flex">
                             <div class="col-sm-6 d-flex">
-                                <input type="text" name="codigocliente" value="${c.getDni()}" class="form-control" placeholder="DNI">
-                                <button type="submit" name="accion" value="BuscarCliente" class="btn btn-outline-info">Buscar</button>
+                                <input type="text" name="codigocliente" value="${c.getDni()}" class="form-control" placeholder="DNI" required>
+                                <button type="submit" name="accion" value="BuscarCliente" class="btn btn-dark">Buscar</button>
                             </div>                           
                             <div class="col-sm-6">
-                                <input type="text" name="nombrescliente" value="${c.getNom()}" placeholder="Datos Cliente" class="form-control">
+                                <input type="text" name="nombrescliente" value="${c.getNom()}" placeholder="Datos Cliente" class="form-control" >
                             </div>                           
                         </div>
                         <!--DATOS DEL PRODUCTO-->
@@ -54,8 +54,8 @@
                         </div>
                         <div class="form-group d-flex">
                             <div class="col-sm-6 d-flex">
-                                <input type="text" name="codigoproducto" value="${producto.getId()}" class="form-control" placeholder="Codigo">
-                                <button type="submit" name="accion" value="BuscarProducto" class="btn btn-outline-info">Buscar</button>
+                                <input type="text" name="codigoproducto" value="${producto.getId()}" class="form-control" placeholder="Codigo" required>
+                                <button type="submit" name="accion" value="BuscarProducto" class="btn btn-dark">Buscar</button>
                             </div>                           
                             <div class="col-sm-6">
                                 <input type="text" name="nomproducto" value="${producto.getNom()}" placeholder="Datos Producto" class="form-control">
@@ -75,7 +75,7 @@
                         <!--BOTON AGREGAR PRODUCTO AL REGISTRO-->
                         <div class="form-group">
                             <div class="col-sm">
-                                <button type="submit" name="accion" value="Agregar" class="btn btn-outline-primary">Agregar Producto</button>
+                                <button type="submit" name="accion" value="Agregar" class="btn btn-primary">Agregar Producto</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                 <div class="card-footer" >
                     <div class="row">
                         <div class="col-sm-6">
-                            <a href="Controlador?menu=NuevaVenta&accion=GenerarVenta" class="btn btn-success">Generar Venta</a>
+                            <a href="Controlador?menu=NuevaVenta&accion=GenerarVenta" onclick="print()" class="btn btn-success">Generar Venta</a>
                             <input type="submit" name="accion" value="Cancelar" class="btn btn-danger">
                         </div>
                         <div class="col-sm-6 ml-auto d-flex">                                

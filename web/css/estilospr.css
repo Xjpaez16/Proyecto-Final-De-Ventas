@@ -483,3 +483,12 @@ html, body {
     color: white;
     font-weight: 600;
 }
+.dataTables_scrollHeadInner{
+    color: white;
+}
+.dataTables_info{
+    color: white;
+}
+
+
+

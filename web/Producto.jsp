@@ -64,7 +64,8 @@
             <div class="col-sm-8">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-hover" style="width: 100%" id="example">
+                        
+                       <table class="table" style="width: 100%" id="example">
                             <thead>
                                 <tr class="text-center">
                                     <th>#</th>
@@ -75,7 +76,7 @@
                                     <th>ACCION</th>
                                 </tr>
                             </thead>
-                            <tbody> 
+                            <tbody class="bg-white"> 
                                 <c:forEach var="em" items="${productos}">
                                     <tr>
                                         <td class="text-center">${em.getId()}</td>                                      

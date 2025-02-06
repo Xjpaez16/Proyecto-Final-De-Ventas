@@ -66,7 +66,7 @@
 
         <!-- Tabla de empleados -->
         <div class="tablita">
-            <table class="table-hover" style="width: 100%" id="example">
+            <table class="table" style="width: 100%" id="example">
              <thead>
                  <tr class="trtablita">
                      <th>#</th>

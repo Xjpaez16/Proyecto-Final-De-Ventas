@@ -13,9 +13,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import sendemail.SendEmailUsingGMailSMTP;
+
 
 /**
  *
@@ -181,7 +184,6 @@ public class Controlador extends HttpServlet {
                 case "Listar":
                     List productos = pdao.listar();
                     request.setAttribute("productos", productos);
-                    request.getRequestDispatcher("Producto.jsp").forward(request, response);
                     break;
                 case "Agregar":
                     String dni = request.getParameter("txtDni");
@@ -353,15 +355,18 @@ public class Controlador extends HttpServlet {
                         int sac = pr.getStock() - cantidad;
                         aO.actualizarstock(idproducto, sac);
                     }
-                    //Guardar Venta
+                    
                     v.setIdcliente(c.getId());
                     v.setIdempleado(2);
                     v.setNumserie(numeroserie);
-                    v.setFecha("2019-06-14");
+                    LocalDate fechaActual = LocalDate.now();
+                    DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    String hoy = fechaActual.format(formato);
+                    v.setFecha(hoy);
                     v.setMonto(totalPagar);
                     v.setEstado("1");
                     int r = vdao.guardarVenta(v);
-                    //Guardar Detalle ventas
+                    
                     int idv = Integer.parseInt(vdao.IdVentas());
                     for (int i = 0; i < lista.size(); i++) {
                         v = new Venta();
@@ -371,11 +376,11 @@ public class Controlador extends HttpServlet {
                         v.setPrecio(lista.get(i).getPrecio());
                         r = vdao.guardarDetalleventas(v);
                     }
-
-                  
                     lista = new ArrayList<>();
                     request.getRequestDispatcher("Controlador?menu=NuevaVenta&accion=ventanueva").forward(request, response);
+                   
                     System.out.println("Venta Realizada con Éxito..!!!:" + r);
+                    
                     break;
                 default:
                     v = new Venta();
@@ -394,43 +399,13 @@ public class Controlador extends HttpServlet {
                     }
                     session.setAttribute("usuario", usuario);
                     request.getRequestDispatcher("RegistrarVenta.jsp").forward(request, response);
+                    
             }
             }else{
                     request.getRequestDispatcher("RegistrarVenta.jsp").forward(request, response);
             }
         }
-        if (menu.equals("EnviarCorreo")) {
-            switch (accion) {
-                case "New":
-                    List<Cliente> clientes = cdao.listar();
-                    request.setAttribute("clientes", clientes);
-                    session.setAttribute("clientesSeleted", new ArrayList<Cliente>());
-                    request.getRequestDispatcher("EnviarCorreo.jsp").forward(request, response);
-                    break;
-                case "add":
-                    List<Cliente> getClientes = cdao.listar();
-                    request.setAttribute("clientes", getClientes);
-                    List<Cliente> selected = new ArrayList<>();
-                    for (Cliente c : getClientes) {
-                        String var = request.getParameter("txtSend" + c.getId());
-                        if (var != null && var.equals("on")) {
-                            selected.add(c);
-                        }
-                    }
-                    session.setAttribute("clientesSeleted", selected);
-                    request.setAttribute("clientes", getClientes);
-                    request.getRequestDispatcher("EnviarCorreo.jsp").forward(request, response);
-                    break;
-                case "enviar":
-                    List<Cliente> selectedToSend = (List<Cliente>) session.getAttribute("clientesSeleted");
-                    String asunto = request.getParameter("txtAsunto");
-                    String mensaje = request.getParameter("txtMensaje");
-                    SendEmailUsingGMailSMTP.sendEmail(asunto, mensaje, selectedToSend);
-                    request.getRequestDispatcher("Controlador?menu=EnviarCorreo&accion=New").forward(request, response);
-                    break;
-            }
-
-        }
+        
 
     }
 
