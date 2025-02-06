@@ -35,7 +35,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error buscar cliente:" + e);
         }
 
         return c;
@@ -62,7 +62,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listar cliente:" + e);
         }
         return lista;
     }
@@ -82,7 +82,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al agregar cliente:" + e);
         }
         return r;
 
@@ -105,7 +105,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listarId cliente:" + e);
         }
         return cli;
     }
@@ -125,7 +125,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al actualizar cliente:" + e);
         }
         return r;
     }
@@ -140,7 +140,7 @@ public class ClienteDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al eliminar cliente:" + e);
         }
     }
 

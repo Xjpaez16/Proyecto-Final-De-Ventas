@@ -333,7 +333,7 @@ public class Controlador extends HttpServlet {
                         totalPagar = totalPagar + lista.get(i).getSubtotal();
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Error:" + e);
+                    System.out.println("Error update venta:" + e);
                 }
                 request.setAttribute("nserie", numeroserie);
                 request.setAttribute("c", c);

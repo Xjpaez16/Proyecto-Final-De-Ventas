@@ -29,7 +29,7 @@ public class VentaDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al generar serie venta:" + e);
         }
         return numeroserie;
     }
@@ -48,7 +48,7 @@ public class VentaDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error idventas:" + e);
         }
         return idventas;
     }
@@ -69,7 +69,7 @@ public class VentaDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al guardar venta:" + e);
         }
         return r;
     }
@@ -88,7 +88,7 @@ public class VentaDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al guardar detalle venta:" + e);
         }
         return r;
     }

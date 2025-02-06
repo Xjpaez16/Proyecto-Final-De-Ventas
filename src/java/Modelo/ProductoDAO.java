@@ -31,7 +31,8 @@ public class ProductoDAO {
                 p.setStock(rs.getInt(4));
                 p.setEstado(rs.getString(5));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            System.out.println("Error al buscar producto:" + e);
         }
         return p;
     }
@@ -48,7 +49,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al actualizar producto:" + e);
         }
         return r;
     }
@@ -74,7 +75,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listar producto:" + e);
         }
         return lista;
     }
@@ -93,7 +94,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al agregar producto:" + e);
         }
         return r;
 
@@ -117,7 +118,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listarId producto:" + e);
         }
         return pr;
     }
@@ -137,7 +138,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al actualizar producto:" + e);
         }
         return r;
     }
@@ -152,7 +153,7 @@ public class ProductoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al eliminar producto:" + e);
         }
     }
 

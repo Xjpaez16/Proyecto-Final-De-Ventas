@@ -69,7 +69,7 @@ public class EmpleadoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listar empleado:" + e);
         }
         return lista;
     }
@@ -94,7 +94,7 @@ public class EmpleadoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al agregar empleado:" + e);
         }
         return r;
 
@@ -119,7 +119,7 @@ public class EmpleadoDAO {
             con.close();
             rs.close();
         } catch (Exception e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error al listarId empleado:" + e);
         }
         return emp;
     }
@@ -143,7 +143,7 @@ public class EmpleadoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error actualizar empleado:" + e);
         }
         return r;
     }
@@ -158,7 +158,7 @@ public class EmpleadoDAO {
             con.close();
             rs.close();
         } catch (SQLException e) {
-            System.out.println("Error:" + e);
+            System.out.println("Error el eliminar empleado:" + e);
         }
     }
 
